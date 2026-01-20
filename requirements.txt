@@ -1,0 +1,2 @@
+# Runtime dependencies for fetchers (sources refresh).
+requests>=2.31.0,<3

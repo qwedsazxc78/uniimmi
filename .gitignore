@@ -1,0 +1,14 @@
+# Local tooling
+.venv/
+__pycache__/
+**/__pycache__/
+*.pyc
+
+# Reports
+AUDIT.md
+
+# OS
+.DS_Store
+
+# Prior clipboard artifacts
+.gemini-clipboard/

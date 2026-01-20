@@ -6,15 +6,17 @@ What it does:
 - For folders with tools/fetch_sources.py, runs it to refresh sources.
 - Rebuilds each country's 99-sources-index.md from sources/*.md.
 - Runs lightweight consistency checks (missing refs, bad HTTP status, empty files).
+- Optionally runs the heuristic audit to generate an audit report.
 
 Usage:
   python3 tools/update_all.py
   python3 tools/update_all.py --countries australia-immigration spain-immigration
   python3 tools/update_all.py --no-fetch  # only rebuild indexes + checks
+  python3 tools/update_all.py --audit --audit-report AUDIT.md
 
 Exit codes:
 - 0: ok
-- 1: issues found (non-200 sources, missing refs, empty files, fetch failures)
+- 1: issues found (non-200 sources, missing refs, empty files, fetch/audit failures)
 """
 
 from __future__ import annotations
@@ -28,10 +30,9 @@ import subprocess
 import sys
 from dataclasses import dataclass
 from datetime import datetime
-from typing import Dict, Iterable, List, Optional, Sequence, Tuple
+from typing import List, Sequence, Tuple
 
 KNOWN_ISSUES_PATH = os.path.join('tools', 'known_issues.json')
-
 
 
 @dataclass
@@ -54,7 +55,7 @@ def load_known_issues() -> dict:
 
 
 def list_country_dirs(root: str) -> List[str]:
-    dirs = []
+    dirs: List[str] = []
     for name in os.listdir(root):
         p = os.path.join(root, name)
         if os.path.isdir(p) and name.endswith('-immigration'):
@@ -62,7 +63,7 @@ def list_country_dirs(root: str) -> List[str]:
     return sorted(dirs)
 
 
-def run(cmd: Sequence[str], cwd: str, timeout_s: int = 900) -> int:
+def run_cmd(cmd: Sequence[str], cwd: str, timeout_s: int = 900) -> int:
     proc = subprocess.run(cmd, cwd=cwd, timeout=timeout_s)
     return int(proc.returncode)
 
@@ -121,7 +122,7 @@ def write_sources_index(country_dir: str, rows: List[SourceRow]) -> None:
 
 
 def scan_missing_refs(country_dir: str) -> List[str]:
-    refs: set[str] = set()
+    refs: set = set()
     for path in glob.glob(os.path.join(country_dir, '*.md')):
         txt = open(path, 'r', encoding='utf-8', errors='ignore').read()
         for m in re.finditer(r'`([^`]*?/sources/[^`]+?\.md)`', txt):
@@ -132,7 +133,7 @@ def scan_missing_refs(country_dir: str) -> List[str]:
 
 
 def scan_empty_topic_files(country_dir: str) -> List[str]:
-    empties = []
+    empties: List[str] = []
     for path in glob.glob(os.path.join(country_dir, '*.md')):
         if os.path.getsize(path) == 0:
             empties.append(path)
@@ -147,7 +148,7 @@ def scan_bad_sources(country_dir: str, known_issues: dict) -> List[Tuple[int, st
     except Exception:
         allowed = set()
 
-    bad = []
+    bad: List[Tuple[int, str]] = []
     for r in parse_sources_rows(country_dir):
         try:
             st = int(r.status)
@@ -161,14 +162,17 @@ def scan_bad_sources(country_dir: str, known_issues: dict) -> List[Tuple[int, st
     return sorted(bad)
 
 
-def main() -> int:
-    ap = argparse.ArgumentParser()
+def add_arguments(ap: argparse.ArgumentParser) -> None:
     ap.add_argument('--countries', nargs='*', default=None, help='Limit to specific country folders')
     ap.add_argument('--no-fetch', action='store_true', help='Skip running country tools/fetch_sources.py')
     ap.add_argument('--timeout', type=int, default=900, help='Timeout seconds for each fetch_sources.py')
-    args = ap.parse_args()
+    ap.add_argument('--audit', action='store_true', help='Run heuristic audit after updates')
+    ap.add_argument('--audit-report', default='AUDIT.md', help='Audit report output path (Markdown)')
 
+
+def run(args: argparse.Namespace) -> int:
     root = os.getcwd()
+
     all_countries = list_country_dirs(root)
     countries = all_countries
     if args.countries:
@@ -180,7 +184,6 @@ def main() -> int:
         return 1
 
     issues: List[str] = []
-
     known_issues = load_known_issues()
 
     for c in countries:
@@ -188,7 +191,7 @@ def main() -> int:
         fetch = os.path.join(c, 'tools', 'fetch_sources.py')
         if (not args.no_fetch) and os.path.exists(fetch):
             print(f'- Running: {fetch}')
-            rc = run([sys.executable, fetch], cwd=root, timeout_s=args.timeout)
+            rc = run_cmd([sys.executable, fetch], cwd=root, timeout_s=args.timeout)
             if rc != 0:
                 issues.append(f'{c}: fetch_sources.py failed rc={rc}')
 
@@ -215,6 +218,25 @@ def main() -> int:
             for st, fn in bad[:15]:
                 issues.append(f'  - {st} {c}/sources/{fn}')
 
+    if args.audit:
+        print('\n== AUDIT ==')
+        audit_tool = os.path.join('tools', 'audit_kb.py')
+        if not os.path.exists(audit_tool):
+            issues.append('audit_kb.py missing: tools/audit_kb.py')
+        else:
+            cmd = [
+                sys.executable,
+                audit_tool,
+                '--write-report',
+                args.audit_report,
+                '--countries',
+                *countries,
+            ]
+            print(f"- Running: {' '.join(cmd)}")
+            rc = run_cmd(cmd, cwd=root, timeout_s=900)
+            if rc != 0:
+                issues.append(f'audit_kb.py reported issues rc={rc} (see {args.audit_report})')
+
     if issues:
         print('\nIssues found:')
         for line in issues:
@@ -225,5 +247,12 @@ def main() -> int:
     return 0
 
 
+def cli(argv=None) -> int:
+    ap = argparse.ArgumentParser()
+    add_arguments(ap)
+    args = ap.parse_args(argv)
+    return run(args)
+
+
 if __name__ == '__main__':
-    raise SystemExit(main())
+    raise SystemExit(cli())
