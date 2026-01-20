@@ -1,0 +1,87 @@
+Source: https://visa.educationmalaysia.gov.my/guidelines/sev-required-countries
+
+# SEV Required Countries
+
+## List of Countries that requires Single Entry Visa (SEV) prior to entering Malaysia
+The following is the list of countries that requires a Single Entry Visa prior to entering Malaysia
+- Algeria
+- Argentina
+- Austria
+- Bahrain
+- Bangladesh
+- Belgium
+- Bosnia and Herzegovina
+- Brazil
+- Cambodia
+- Cameroon
+- Chile
+- China
+- Croatia
+- Cuba
+- Cyprus
+- Czech Republic
+- Egypt
+- Finland
+- France
+- Germany
+- Ghana
+- Guinea
+- Hong Kong SAR China
+- Hungary
+- India
+- Indonesia
+- Iran
+- Italy
+- Japan
+- Jordan
+- Kazakhstan
+- Kosovo
+- Kuwait
+- Laos
+- Lebanon
+- Malta
+- Mexico
+- Morocco
+- Mozambique
+- Myanmar (Burma)
+- Nepal
+- Nigeria
+- Oman
+- Pakistan
+- Peru
+- Philippines
+- Poland
+- Qatar
+- Romania
+- Russia
+- Rwanda
+- Samoa
+- Saudi Arabia
+- Senegal
+- Serbia
+- Sierra Leone
+- South Korea
+- South Sudan
+- Spain
+- Sri Lanka
+- Sudan
+- Sweden
+- Taiwan
+- Thailand
+- Timor-Leste
+- Turkey
+- Turkemenistan
+- Ukraine
+- United Arab Emirates
+- Uzbekistan
+- Venezuela
+- Vietnam
+Please note that this list is subject to change without prior notice based on the requirement by the Malaysian Immigration Department. You are advised to check this page regularly for the latest update/changes.Guidelines
+- Required Documents (https://visa.educationmalaysia.gov.my/guidelines/required-documents)
+- Medical Screening (https://visa.educationmalaysia.gov.my/guidelines/medical-screening)
+- Registered Malaysian Clinic (https://visa.educationmalaysia.gov.my/guidelines/registered-malaysian-clinic)
+- Insurance - New (https://visa.educationmalaysia.gov.my/guidelines/insurance-new-2025)
+- Insurance - Old (https://visa.educationmalaysia.gov.my/guidelines/insurance-new)
+- Online Photo Checker (https://visa.educationmalaysia.gov.my/guidelines/online-photo-checker)
+- Passport Photo Guidelines (https://visa.educationmalaysia.gov.my/guidelines/passport-photo-guidelines)
+- SEV Required Countries
