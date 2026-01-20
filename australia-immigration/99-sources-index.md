@@ -1,9 +1,9 @@
-# 澳洲移民研究來源索引（sources index）
+# 來源索引（sources index）
 
 最後更新：2026-01-20  
-**標籤**：#澳洲 #sources #官方來源 #可追溯性
+**標籤**：#sources #官方來源 #可追溯性
 
-> 說明：本索引對應 `australia-immigration/sources/` 內的「原始頁面文字抽取版」。如遇內容缺漏，請直接點 `Source` URL 以官方原文為準。
+> 說明：本索引對應本資料夾內 `sources/` 的「原始頁面文字抽取版」。如遇內容缺漏（例如網站以 JS 動態載入），請直接點 `Source` URL 以官方原文為準。
 
 | 檔案 | HTTP | 抓取時間(UTC) | 標題 | Source |
 |---|---:|---|---|---|
@@ -51,7 +51,7 @@
 | `australia-immigration/sources/immi_sponsored_parent_870.md` | 200 | 2026-01-20T09:37:24Z | Untitled | https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/sponsored-parent-temporary-870 |
 | `australia-immigration/sources/immi_visa_finder.md` | 200 | 2026-01-20T09:37:24Z | Explore visa options | https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-finder |
 | `australia-immigration/sources/immi_visa_processing_times.md` | 200 | 2026-01-20T09:37:24Z | Visa processing times | https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-processing-times |
-| `australia-immigration/sources/leg_australian_citizenship_act_2007_latest.md` | 500 | 2026-01-20T09:37:33Z | 500 - Internal server error. | https://www.legislation.gov.au/C2004A00319/latest/text |
+| `australia-immigration/sources/leg_australian_citizenship_act_2007_latest.md` | 200 | 2026-01-20T10:47:15Z | Retirement Savings Account Providers Supervisory Levy Imposition Act 1998 - Federal Register of Legislation | https://www.legislation.gov.au/C2004A00319/latest/text |
 | `australia-immigration/sources/leg_australian_citizenship_regulations_2016_latest.md` | 200 | 2026-01-20T09:37:46Z | Telecommunications (Interception and Access) (Communications Access Co-ordinator) Specification 2016 - Federal Register of Legislation | https://www.legislation.gov.au/F2016L00217/latest/text |
-| `australia-immigration/sources/leg_migration_act_1958_latest.md` | 200 | 2026-01-20T09:44:20Z | Migration Act 1958 - Federal Register of Legislation | https://www.legislation.gov.au/C1958A00062/latest/text |
+| `australia-immigration/sources/leg_migration_act_1958_latest.md` | 200 | 2026-01-20T10:47:16Z | Migration Act 1958 - Federal Register of Legislation | https://www.legislation.gov.au/C1958A00062/latest/text |
 | `australia-immigration/sources/leg_migration_regulations_1994_latest.md` | 200 | 2026-01-20T09:38:48Z | Migration Regulations 1994 - Federal Register of Legislation | https://www.legislation.gov.au/F1996B03551/latest/text |

@@ -54,22 +54,12 @@ Excluding the application for unconditional stay or visit visa.
 
  Table 2 
 
- Type of Applicant | 
- Item | 
- Fee
-(for each application)
-(HK$) | 
-
- Principal applicant or Dependant | 
- Application fee Note 3 | 
- 600 | 
-
- Two-tiered visa issuance fee | 
- with relevant period Note 4 of more than 180 days | 
- 1,300 | 
-
- with relevant period Note 4 of not more than 180 days | 
- 600 | 
+ Type of Applicant | Item | Fee (for each application) (HK$)
+ --- | --- | ---
+ Principal applicant or Dependant | Application fee Note 3 | 600
+ | Two-tiered visa issuance fee: | 
+ | - with relevant period Note 4 of more than 180 days | 1,300
+ | - with relevant period Note 4 of not more than 180 days | 600 
 
  Note 3: 
 The application fee paid is non-refundable in any circumstances irrespective of the application result.

@@ -1,0 +1,11 @@
+{
+  "australia-immigration": {
+    "allowed_sources": [
+      {
+        "file": "immi_bvd_040_041.md",
+        "status": 404,
+        "reason": "Official Home Affairs page currently returns 404 (likely moved/retired); keep as known issue with note in docs."
+      }
+    ]
+  }
+}

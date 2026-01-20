@@ -56,9 +56,13 @@ New Capital Investment Entrant Scheme | Immigration Department
 (iii) Macao Special Administrative Region residents; or
 (iv) Chinese residents of Taiwan;
 
- Net assets &ndash; applies for net asset assessment to InvestHK, i.e. demonstrating that he/she has net assets or net equity (including the respective portion of jointly-owned assets or equity with the applicant&rsquo;s family member(s) which is absolutely beneficially entitled to the applicant as mentioned in paragraph 1.15 of the New Scheme Rules) to which he/she is absolutely beneficially entitled with a market value of not less than HK$30 million Net (or equivalent in foreign currencies) throughout the six months preceding the date he/she lodged the application for net asset assessment;
+ Net assets &ndash; applies for net asset assessment to InvestHK, i.e. demonstrating that he/she has net assets or net equity (including the respective portion of jointly-owned assets or equity with the applicant&rsquo;s family member(s) which is absolutely beneficially entitled to the applicant as mentioned in paragraph 1.15 of the New Scheme Rules) to which he/she is absolutely beneficially entitled with a market value of not less than HK$30 million Net (or equivalent in foreign currencies) throughout the six months (reduced from two years effective 1 March 2025) preceding the date he/she lodged the application for net asset assessment;
 
  Investment in permissible investment assets &ndash; makes investment of not less than HK$30 million Net (or equivalent in foreign currencies) in the permissible investment assets Note2 to which he/ she is absolutely beneficially entitled;
+
+ **Note on 2025 Enhancements:**
+ - **Effective 1 March 2025:** The period for demonstrating net assets was shortened to the preceding six months.
+ - **Effective 17 September 2025:** Investment in residential properties is allowed if the transaction price is HK$30 million or above (reduced from HK$50 million). The aggregate amount of real estate (residential and/or non-residential) that can be counted towards the minimum investment threshold is raised to HK$15 million (previously HK$10 million).
 
  No adverse record &ndash; demonstrates that he/she has no adverse immigration record and meets normal immigration and security requirements; and
 

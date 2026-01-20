@@ -20,7 +20,7 @@ In accordance with World Health Organization recommendations, applicants for ROC
 - Afghanistan
 - Pakistan
 - The Democratic Republic of the Congo
-- Guinea
+- Guiana
 - Algeria
 - Djibouti
 - Israel
